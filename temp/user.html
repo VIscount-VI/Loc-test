@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+        .box {
+            padding: 4px;
+            max-width: 40%;
+            margin:auto;
+            margin-top: 2%;
+            box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.068);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            font-family: monospace;
+            color: rgb(47, 105, 160);
+            font-weight: 600;
+            box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.048);
+        }
+        p {
+           font-family: monospace;
+           font-weight: 600;
+           margin-left: 28%;
+           color: chocolate;
+           font-size: 16px;
+           margin-top: 2%;
+        }
+        a {
+            margin: 2%;
+            text-decoration: none;
+            font-family: monospace;
+            font-weight: 600;
+        }
+    </style>
+
+<p>Foydalanuvchilar</p>
+{% for BotUser in object_list %}
+<div class="box">
+    <hr>
+    <h1>{{ BotUser.name }}</h1>
+    <a href="{% url 'list' %}">Xabarni ko`rish</a>
+</div>
+    {% endfor %}
+
+    
+
+    
+
+
+    
+    
+</body>
+</html>
